@@ -1,0 +1,96 @@
+$colorAmarillo: yellow; 
+$colorNegro: black;
+$colorBlanco: white;
+$margin: 10px;
+$font-size: 1rem;
+
+$fondo: primario;
+$colorSectionMenu: primario;
+$colorFooter: primario;
+
+@mixin transition {
+    transition: 1s;
+}
+
+@for $botones from 1 through 3 {
+    .btn--#{$botones} {margin-top: 1px * $botones;}
+}
+$colorFondo: (
+    fondoPrimario: black,
+    fondoSecundario:black,
+);
+@each $fondo, $color in $colorFondo {
+    .card--#{$fondo} {
+        background-color: $color;
+    }
+    
+}
+body{
+    @if $fondo == secundario {
+    background: $colorAmarillo;
+    } @else {
+    background-color: $colorNegro;    
+    }
+} 
+#sectionMenu{
+    @if $colorSectionMenu == secundario {
+        background: $colorAmarillo;
+        } @else {
+        background-color: $colorNegro;    
+        }
+    justify-content: center;
+}   
+a:hover{
+	@include transition;
+	color: $colorAmarillo;  
+	font-size: $font-size+0.2;
+}
+li a:hover{
+    @include transition;
+    color: $colorAmarillo;
+    position: relative;
+    font-size: $font-size+0.2;
+}
+#linkMenu{
+    @include transition;
+    color: $colorBlanco;
+    font-size: $font-size+3;
+    text-decoration: none;
+    &:hover{
+        @include transition;
+        position: relative;
+        font-size: $font-size+3.5;
+        text-decoration: none;
+    }
+}
+.imgRedes{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-right: 70px;
+    list-style: none;
+}
+.escalarImagen{
+    transform: scale(2,2);
+    margin: $margin;
+    animation-name: scale;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+@keyframes mode{
+    0%{background-color: $colorNegro;}
+    100%{background-color: $colorBlanco;}
+}
+@keyframes scale{
+    0%{transform: rotate(35deg);}
+    50%{transform: rotate(-35deg);}
+    100%{transform: rotate(35deg);}
+}
+#footer{
+    @if $colorFooter == secundario {
+        background: $colorAmarillo;
+        } @else {
+        background-color: $colorNegro;    
+        }
+    margin: $margin*5;
+}

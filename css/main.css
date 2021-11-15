@@ -1,0 +1,75 @@
+.btn--1 {
+  margin-top: 1px; }
+
+.btn--2 {
+  margin-top: 2px; }
+
+.btn--3 {
+  margin-top: 3px; }
+
+.card--fondoPrimario {
+  background-color: black; }
+
+.card--fondoSecundario {
+  background-color: black; }
+
+body {
+  background-color: black; }
+
+#sectionMenu {
+  background-color: black;
+  justify-content: center; }
+
+a:hover {
+  transition: 1s;
+  color: yellow;
+  font-size: 1.2rem; }
+
+li a:hover {
+  transition: 1s;
+  color: yellow;
+  position: relative;
+  font-size: 1.2rem; }
+
+#linkMenu {
+  transition: 1s;
+  color: white;
+  font-size: 4rem;
+  text-decoration: none; }
+  #linkMenu:hover {
+    transition: 1s;
+    position: relative;
+    font-size: 4.5rem;
+    text-decoration: none; }
+
+.imgRedes {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding-right: 70px;
+  list-style: none; }
+
+.escalarImagen {
+  transform: scale(2, 2);
+  margin: 10px;
+  animation-name: scale;
+  animation-iteration-count: infinite;
+  animation-duration: 2s; }
+
+@keyframes mode {
+  0% {
+    background-color: black; }
+  100% {
+    background-color: white; } }
+
+@keyframes scale {
+  0% {
+    transform: rotate(35deg); }
+  50% {
+    transform: rotate(-35deg); }
+  100% {
+    transform: rotate(35deg); } }
+
+#footer {
+  background-color: black;
+  margin: 50px; }
